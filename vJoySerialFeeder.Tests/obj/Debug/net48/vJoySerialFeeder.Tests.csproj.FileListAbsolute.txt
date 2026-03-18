@@ -1,6 +1,0 @@
-/Users/jpasichnyk/Documents/Personal GitHub/vJoySerialFeeder/vJoySerialFeeder.Tests/obj/Debug/net48/vJoySerialFeeder.Tests.csproj.AssemblyReference.cache
-/Users/jpasichnyk/Documents/Personal GitHub/vJoySerialFeeder/vJoySerialFeeder.Tests/obj/Debug/net48/vJoySerialFeeder.Tests.GeneratedMSBuildEditorConfig.editorconfig
-/Users/jpasichnyk/Documents/Personal GitHub/vJoySerialFeeder/vJoySerialFeeder.Tests/obj/Debug/net48/vJoySerialFeeder.Tests.AssemblyInfoInputs.cache
-/Users/jpasichnyk/Documents/Personal GitHub/vJoySerialFeeder/vJoySerialFeeder.Tests/obj/Debug/net48/vJoySerialFeeder.Tests.AssemblyInfo.cs
-/Users/jpasichnyk/Documents/Personal GitHub/vJoySerialFeeder/vJoySerialFeeder.Tests/obj/Debug/net48/vJoySerialFeeder.Tests.csproj.CoreCompileInputs.cache
-/Users/jpasichnyk/Documents/Personal GitHub/vJoySerialFeeder/vJoySerialFeeder.Tests/obj/Debug/net48/vJoySerialFeeder.Tests.sourcelink.json
