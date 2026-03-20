@@ -157,7 +157,7 @@ namespace vJoySerialFeeder
 		
 		public override string ProtocolName { get { return "FPort"; } }
 		
-		private void parseConfig(string config) {
+		internal void parseConfig(string config) {
 			var tokens = config == null ?
 					new string[0]
 					:
@@ -171,7 +171,7 @@ namespace vJoySerialFeeder
 			}
 		}
 		
-		private string buildConfig() {
+		internal string buildConfig() {
 			var cfg = new ArrayList();
 			if(useRawInput)
 				cfg.Add("raw");
