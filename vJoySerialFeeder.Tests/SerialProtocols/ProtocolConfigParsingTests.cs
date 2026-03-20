@@ -128,6 +128,31 @@ namespace vJoySerialFeeder.Tests.SerialProtocols
 		}
 
 		[Test]
+		public void ParseConfig_ReversedOrder_BuildConfigNormalizesOrder()
+		{
+			var reader = new SbusReader();
+			reader.parseConfig("failsafe,raw");
+			// buildConfig always outputs raw first, then failsafe
+			Assert.That(reader.buildConfig(), Is.EqualTo("raw,failsafe"));
+		}
+
+		[Test]
+		public void ParseConfig_UnknownTokensIgnored()
+		{
+			var reader = new SbusReader();
+			reader.parseConfig("raw,bogus,failsafe");
+			Assert.That(reader.buildConfig(), Is.EqualTo("raw,failsafe"));
+		}
+
+		[Test]
+		public void ParseConfig_OnlyUnknownTokens_BuildConfigReturnsEmpty()
+		{
+			var reader = new SbusReader();
+			reader.parseConfig("foo,bar");
+			Assert.That(reader.buildConfig(), Is.EqualTo(""));
+		}
+
+		[Test]
 		public void ParseConfig_RoundTrip()
 		{
 			var reader = new SbusReader();
@@ -278,6 +303,30 @@ namespace vJoySerialFeeder.Tests.SerialProtocols
 			var reader = new FportReader();
 			reader.parseConfig("raw,failsafe");
 			Assert.That(reader.buildConfig(), Is.EqualTo("raw,failsafe"));
+		}
+
+		[Test]
+		public void ParseConfig_ReversedOrder_BuildConfigNormalizesOrder()
+		{
+			var reader = new FportReader();
+			reader.parseConfig("failsafe,raw");
+			Assert.That(reader.buildConfig(), Is.EqualTo("raw,failsafe"));
+		}
+
+		[Test]
+		public void ParseConfig_UnknownTokensIgnored()
+		{
+			var reader = new FportReader();
+			reader.parseConfig("raw,bogus,failsafe");
+			Assert.That(reader.buildConfig(), Is.EqualTo("raw,failsafe"));
+		}
+
+		[Test]
+		public void ParseConfig_OnlyUnknownTokens_BuildConfigReturnsEmpty()
+		{
+			var reader = new FportReader();
+			reader.parseConfig("foo,bar");
+			Assert.That(reader.buildConfig(), Is.EqualTo(""));
 		}
 
 		[Test]
